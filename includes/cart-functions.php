@@ -4,7 +4,6 @@ add_filter('woocommerce_product_single_add_to_cart_text', 'woo_customized_dynami
 add_filter('woocommerce_product_add_to_cart_text', 'woo_customized_dynamic_cart_btn_text', 20, 2);
 
 function woo_customized_dynamic_cart_btn_text($default_text, $product = null) {
-    error_log('7: cart button text' . print_r($default_text, true));
     if (!$product) {
         global $product;
     }
@@ -22,7 +21,6 @@ function woo_customized_dynamic_cart_btn_text($default_text, $product = null) {
     // Get global settings
     $global_enabled = get_option('woo_customized_enabled');
     $global_text    = get_option('woo_customized_cart_text');
-    error_log('25 cart: enabled custom ::' . print_r($enable_custom, true));
     if ($global_enabled && $enable_custom == 'yes' && !empty($product_text)) {
         return esc_html($product_text);
     } elseif ($global_enabled && $enable_custom == 'yes' && !empty($global_text)) {

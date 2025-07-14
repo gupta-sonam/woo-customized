@@ -30,7 +30,6 @@ function woo_custom_product_list_shortcode($atts) {
         while ($loop->have_posts()) {
             $loop->the_post();
             global $product;
-            error_log('product obj:' . print_r($product, true));
             $product_id = $product->get_id();
             $price = $product->get_price_html();
             $title = get_the_title();

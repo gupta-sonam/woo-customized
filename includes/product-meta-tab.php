@@ -51,7 +51,6 @@ function woo_custom_product_tab_content() {
 
 
 add_action('woocommerce_process_product_meta', function($post_id) {
-    error_log('post data:' . print_r($_POST['_woo_enable_custom_text'], true));
     update_post_meta($post_id, '_woo_enable_custom_text', isset($_POST['_woo_enable_custom_text']) ? 'yes' : 'no');
     update_post_meta($post_id, '_woo_product_cart_text', sanitize_text_field($_POST['_woo_product_cart_text']));
 });
