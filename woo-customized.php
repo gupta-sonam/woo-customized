@@ -15,7 +15,8 @@ if (!defined('ABSPATH')) {
 
 define('WOO_CUSTOMIZED_VERSION', '1.0');
 define('WOO_CUSTOMIZED_URL', plugin_dir_url(__FILE__));
-define('WOO_CURL_URL', 'https://3e3b255b-6f5f-4d5a-bcea-bc4993ee24de-00-1kbkahjgz4alw.picard.replit.dev/api/echo');
+// define('WOO_CURL_URL', 'https://3e3b255b-6f5f-4d5a-bcea-bc4993ee24de-00-1kbkahjgz4alw.picard.replit.dev/api/echo');
+define('WOO_CURL_URL', 'https://dummyjson.com/carts/add');
 add_action('plugins_loaded', 'woo_customized_plugin_init');
 
 function woo_customized_plugin_init() {
